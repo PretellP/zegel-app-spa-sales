@@ -37,18 +37,43 @@ const lightTheme = createTheme({ palette: { mode: 'light' } });
 const Forms = () => {
   return (
     <Grid container spacing={3}>
+
       <Grid item xs={12} lg={12}>
 
-        <BaseCard title="Formulario de ventas">
+        <BaseCard title="Nuevo">
           <>
-            <Stack spacing={3}>
+            <Grid item xs={12} lg={12} gap={2} display={'flex'}>
 
-              <TextField
-                id="name-basic"
-                label="Código"
-                variant="outlined"
-              // defaultValue="Nirav Joshi"
-              />
+              <Grid item xs={6} lg={6}>
+                <Stack spacing={3}>
+                  <FormControl>
+                    <TextField
+                      id="client-basic"
+                      label="Cliente"
+                      variant="standard"
+                    // defaultValue="Nirav Joshi"
+                    />
+                  </FormControl>
+
+                </Stack>
+              </Grid>
+
+              <Grid item xs={6} lg={6}>
+                <Stack spacing={3}>
+                  <TextField
+                    id="name-basic"
+                    label="Código"
+                    variant="outlined"
+                  // defaultValue="Nirav Joshi"
+                  />
+                </Stack>
+              </Grid>
+            </Grid>
+
+
+            {/*  <Stack spacing={3}>
+
+
 
               <FormControl>
                 <FormLabel id="demo-radio-buttons-group-label">Comprobante:</FormLabel>
@@ -141,7 +166,7 @@ const Forms = () => {
               </FormControl>
 
 
-            </Stack>
+            </Stack> */}
             <br />
             <Button>
               Guardar

@@ -21,7 +21,7 @@ const Menuitems = [
     id: uniqueId(),
     title: "Ventas",
     icon: IconTable,
-    href: "/ui-components/forms",
+    href: "/ui-components/sales",
   },
   // {
   //   id: uniqueId(),
