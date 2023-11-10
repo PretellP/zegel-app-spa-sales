@@ -34,6 +34,8 @@ const Item = styled(Paper)(({ theme }) => ({
 const darkTheme = createTheme({ palette: { mode: 'dark' } });
 const lightTheme = createTheme({ palette: { mode: 'light' } });
 
+
+
 const Forms = () => {
   return (
     <Grid container spacing={3}>
@@ -42,35 +44,95 @@ const Forms = () => {
 
         <BaseCard title="Nuevo">
           <>
-            <Grid item xs={12} lg={12} gap={2} display={'flex'}>
+              <Grid item xs={12} lg={12} gap={2} display={'flex'}>
 
-              <Grid item xs={6} lg={6}>
-                <Stack spacing={3}>
-                  <FormControl>
-                    <TextField
-                      id="client-basic"
-                      label="Cliente"
-                      variant="standard"
-                    // defaultValue="Nirav Joshi"
-                    />
+                <Grid item xs={4} lg={4}>
+                  <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Seleccionar Cliente</InputLabel>
+                    <Select labelId="demo-simple-select-label" id="demo-simple-select" label="Seleccionar Cliente">
+
+                      <MenuItem value={10}>Carlitos Yasuo Drakthar</MenuItem>
+                      <MenuItem value={20}>Te pasaste carlitos</MenuItem>
+                      <MenuItem value={30}>Faker</MenuItem>
+                      <MenuItem value={40}>Oner</MenuItem>
+                      <MenuItem value={50}>Gumayusi</MenuItem>
+                      <MenuItem value={60}>Zeus</MenuItem>
+                      <MenuItem value={70}>Keria</MenuItem>
+
+                    </Select>
                   </FormControl>
+                </Grid>
 
-                </Stack>
-              </Grid>
+              {/*  <Grid item xs={6} lg={6}>
+                  <Stack spacing={3}>
+                    <FormControl>
+                      <TextField
+                        id="client-basic"
+                        label="Cliente"
+                        variant="standard"
+                      // defaultValue="Nirav Joshi"
+                      />
+                    </FormControl>
 
-              <Grid item xs={6} lg={6}>
-                <Stack spacing={3}>
-                  <TextField
-                    id="name-basic"
-                    label="Código"
-                    variant="outlined"
-                  // defaultValue="Nirav Joshi"
-                  />
-                </Stack>
-              </Grid>
+                  </Stack>
+                </Grid> */}
+
+                <Grid item xs={2} lg={2}>
+                  <Stack spacing={3}>
+                    <Button>
+                      Expiración
+                    </Button>
+                    <Button>
+                      Lista de Precio
+                    </Button>
+                    <Button>
+                      Plazos de pago
+                    </Button>
+                  </Stack>
+                </Grid>
+
+                <Grid item xs={2} lg={2} style={{fontSize: '12px'}}>
+                  <Stack spacing={3} justifyContent="center" alignItems="center" height="100%">
+                      Tarifa Pública (PEN)
+                  </Stack>
+                </Grid>
+
+                <Grid item xs={2} lg={2} style={{ marginLeft: '150px' }}>
+                  <Stack spacing={3} justifyContent="center" alignItems="center" height="100%">
+                    <Button>
+                      Actualizar Precios
+                    </Button>
+                  </Stack>
+                </Grid>
             </Grid>
 
+            <Grid item xs={12} lg={12} gap={2} display={'flex'} style={{fontSize: '12px'}}>
+              <Grid item xs={5} lg={5}>
+                <Stack spacing={3}>
+                    Lista de Pedido
+                    <Button style={{ marginRight:'auto'}}>
+                      AGREGAR
+                    </Button>
+                    <div>
+                        SaaS - Servicio en nube Básico    200.00 <br />
+                        Cantidad: 1.00 Unidades <br />
+                        Precio unitario: 200.00               
+                    </div>
+                    <br />
 
+                    Términos y condiciones...
+                </Stack>
+              </Grid>
+              <Grid item xs={3} lg={3} style={{ marginLeft: 'auto', marginTop:'auto' }}>
+                <Stack spacing={3} >
+                  <hr />
+                  Base imponible: S/ 200.00 <br />
+                  IGV: S/36.00 <br />
+                  Total: S/236.00
+                </Stack>
+              </Grid>
+            </Grid> 
+            
             {/*  <Stack spacing={3}>
 
 
